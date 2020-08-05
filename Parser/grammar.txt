@@ -1,0 +1,67 @@
+start -> int main ( ) { declaration statement } 
+declaration -> type identifier declaration
+declaration -> type identifier [ int_literal ] declaration
+declaration -> ; declaration
+declaration -> , identifier declaration
+declaration -> , identifier [ int_literal ] declaration
+declaration -> ;
+statement -> assignment
+statement -> assignment statement'
+statement' -> statement
+statement -> { statement } statement
+statement -> { statement }
+statement -> if' 
+statement -> while'
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+while' -> while ( expression ) statement
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+expression -> conjunction
+expression -> conjunction || conjunction
+conjunction -> equality
+conjunction -> equality && equality
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+relation  -> addition
+relation  -> addition relation_op addition
+addition -> term
+addition -> term a'
+a' -> add_sub_op addition
+addition -> term add_sub_op
+term  -> factor
+term  -> factor f'
+f'    -> mul_div_op term
+term  -> factor mul_div_op 
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+eq_neg_op -> ==
+eq_neg_op -> !=
+add_sub_op -> +
+add_sub_op -> -
+mul_div_op -> *
+mul_div_op -> /
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> dig.dig
+char_literal  -> 'char_lit'
+type -> int
+type -> bool
+type -> float
+type -> char
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig

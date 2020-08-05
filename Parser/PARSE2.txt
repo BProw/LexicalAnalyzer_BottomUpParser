@@ -1,0 +1,823 @@
+start -> int main ( ) { declaration statement } 
+
+declaration -> type identifier declaration
+
+declaration -> type identifier [ int_literal ] declaration
+declaration -> ; declaration
+declaration -> , identifier declaration
+declaration -> ;
+
+statement -> assignment statement'
+statement' -> assignment
+statement' -> statement
+statement -> { statement }
+statement -> if' 
+statement -> while' 
+
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement
+
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction || conjunction
+
+conjunction -> equality
+conjunction -> equality && equality
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term add_sub_op term
+
+term     -> factor
+term     -> factor mul_div_op factor
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> int_literal . int_literal
+char_literal  -> ' letter '
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig
+
+
+------------------------------ DONE AT 10:14 PM 3.7.20 ---------------------------------
+
+start -> int main ( ) { vars }
+vars  -> declaration statement 
+vars  -> statement vars
+vars  -> declaration vars
+
+declaration  -> declaration'
+declaration' -> type identifier ;  
+declaration' -> identifier
+declaration' -> type identifier [ digit ] ;
+declaration' -> type identifier , declaration
+declaration' -> ;
+
+statement -> assignment
+statement -> if'
+statement -> while'
+statement -> { statement }
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement  
+
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction or conjunction
+
+conjunction -> equality
+conjunction -> equality and equality 
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition 
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term add_sub_op term
+
+term     -> factor
+term     -> factor mul_div_op factor
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+or  -> ||
+and -> &&
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> int_literal . int_literal
+char_literal  -> ' letter '
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig
+
+
+
+
+
+
+
+
+
+
+------------------------------ DONE AT 10:45 PM (3.7.20) ---------------------------------
+
+start -> int main ( ) { vars }
+vars  -> declaration statement 
+vars  -> statement vars
+vars  -> declaration vars
+
+declaration  -> declaration'
+declaration' -> type identifier declaration
+declaration' -> identifier declaration
+declaration' -> type identifier [ int_literal ] declaration
+declaration' -> ,
+declaration' -> ;
+
+statement -> assignment
+statement -> if'
+statement -> while'
+statement -> { statement }
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement  
+
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction or conjunction
+
+conjunction -> equality
+conjunction -> equality and equality 
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition 
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term add_sub_op term
+
+term     -> factor
+term     -> factor mul_div_op factor
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+or  -> ||
+and -> &&
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> int_literal . int_literal
+char_literal  -> ' letter '
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig
+
+
+__________________________ LORD KNOWS IF IT WILL WORK 4:20 AM 3.8.20 _______________
+
+
+start -> int main ( ) { v }
+v -> declaration statement v'
+v' -> declaration 
+v' -> statement 
+
+declaration -> type identifier declaration
+declaration -> identifier declaration
+declaration -> type identifier [ int_literal ] declaration
+declaration -> , declaration
+declaration -> ;
+
+statement -> assignment
+statement ->  { assignment s }
+statement -> if' s
+statement -> while' s
+s -> statement 
+S -> assignment
+
+
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement
+
+assignment -> identifier = expression ;
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction or conjunction
+
+conjunction -> equality
+conjunction -> equality and equality
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term add_sub_op term
+
+term     -> factor
+term     -> factor mul_div_op factor
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+or  -> ||
+and -> &&
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> int_literal . int_literal
+char_literal  -> ' letter '
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig
+
+
+________________ I HATE MY LIFE 5:18 pm 3.8.20 ______________________
+
+start -> int main ( ) { declaration statement } 
+
+
+declaration -> type identifier declaration
+declaration -> identifier declaration
+declaration -> type identifier [ int_literal ] declaration
+declaration -> , declaration
+declaration -> ;
+
+statement -> assignment statement'
+statement' -> assignment
+statement' -> statement
+statement -> { statement }
+statement -> if' 
+statement -> while' 
+
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement
+
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction || conjunction
+
+conjunction -> equality
+conjunction -> equality && equality
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term add_sub_op term
+
+term     -> factor
+term     -> factor mul_div_op factor
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> int_literal . int_literal
+char_literal  -> ' letter '
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig
+
+
+___________________________ 9:44 pm (3.8.20) ___________________________
+
+start -> int main ( ) { declaration statement } 
+
+declaration -> type identifier declaration
+
+declaration -> type identifier [ int_literal ] declaration
+declaration -> ; declaration
+declaration -> , identifier declaration
+declaration -> , identifier [ int_literal ] declaration
+declaration -> ;
+
+statement -> assignment
+statement -> assignment statement'
+statement' -> statement
+statement -> { statement }
+statement -> if' 
+statement -> while'
+
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement
+
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction || conjunction
+
+conjunction -> equality
+conjunction -> equality && equality
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term add_sub_op term
+
+term     -> factor
+term     -> factor mul_div_op factor
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> dig.dig
+char_literal  -> char_lit
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter letter
+identifier -> letter digit
+letter -> id
+digit -> dig
+
+
+
+___________________ MIDNIGHT :( (3.9.20) __________________________
+
+start -> int main ( ) { declaration statement } 
+
+declaration -> type identifier declaration
+
+declaration -> type identifier [ int_literal ] declaration
+declaration -> ; declaration
+declaration -> , identifier declaration
+declaration -> , identifier [ int_literal ] declaration
+declaration -> ;
+
+statement -> assignment
+statement -> assignment statement'
+statement' -> statement
+statement -> { statement }
+statement -> if' 
+statement -> while'
+
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement
+
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction || conjunction
+
+conjunction -> equality
+conjunction -> equality && equality
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term add_sub_op addition
+
+term     -> factor
+term     -> factor mul_div_op factor
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> dig.dig
+char_literal  -> char_lit
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig
+
+
+--------------------------- 1:00 AM (3.4.20) added to <statement> --------------------
+
+start -> int main ( ) { declaration statement } 
+
+declaration -> type identifier declaration
+
+declaration -> type identifier [ int_literal ] declaration
+declaration -> ; declaration
+declaration -> , identifier declaration
+declaration -> , identifier [ int_literal ] declaration
+declaration -> ;
+
+statement -> assignment
+statement -> assignment statement'
+statement' -> statement
+statement -> { statement } statement
+statement -> { statement }		// Added this 1:00 AM
+
+statement -> if' 
+statement -> while'
+
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement
+
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction || conjunction
+
+conjunction -> equality
+conjunction -> equality && equality
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term add_sub_op addition
+
+
+// CHANGED ADDITION TO THIS ... DOUBT ITS WORTH IT....
+-------------- addition -> term   
+-------------- addition -> term a'
+-------------- a' -> add_sub_op addition
+-------------- addition -> term add_sub_op
+
+
+
+term     -> factor
+term     -> factor mul_div_op factor
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> dig.dig
+char_literal  -> char_lit
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig
+
+----------12:32 PM (3.10.20) FIXED LETTER LETTER AND FUNCTIONALITY FOR LONG MATH XPRESSION 
+
+
+start -> int main ( ) { declaration statement } 
+
+declaration -> type identifier declaration
+
+declaration -> type identifier [ int_literal ] declaration
+declaration -> ; declaration
+declaration -> , identifier declaration
+declaration -> , identifier [ int_literal ] declaration
+declaration -> ;
+
+statement -> assignment
+statement -> assignment statement'
+statement' -> statement
+statement -> { statement } statement
+statement -> { statement }
+
+statement -> if' 
+statement -> while'
+
+
+if' -> if ( expression ) statement
+if' -> if ( expression ) else statement
+
+while' -> while ( expression ) statement
+
+assignment -> identifier = expression ; 
+assignment -> identifier [ expression ] = expression ;
+
+expression -> conjunction
+expression -> conjunction || conjunction
+
+conjunction -> equality
+conjunction -> equality && equality
+
+equality  -> relation
+equality  -> relation eq_neg_op relation
+equality  -> relation eq_neg_op relation
+
+relation  -> addition
+relation  -> addition relation_op addition
+
+addition -> term
+addition -> term a'
+a' -> add_sub_op addition
+addition -> term add_sub_op
+
+term  -> factor
+term  -> factor f'
+f'    -> mul_div_op term
+term  -> factor mul_div_op 
+
+factor   -> identifier
+factor   -> identifier [ expression ]
+factor   -> literal
+factor   -> ( expression )
+
+relation_op -> <
+relation_op -> <=
+relation_op -> >
+relation_op -> >=
+
+eq_neg_op -> ==
+eq_neg_op -> !=
+
+add_sub_op -> +
+add_sub_op -> -
+
+mul_div_op -> *
+mul_div_op -> /
+
+literal -> int_literal
+literal -> bool_literal
+literal -> float_literal
+literal -> char_literal
+
+int_literal   -> digit
+bool_literal  -> true
+bool_literal  -> false
+float_literal -> dig.dig
+char_literal  -> 'char_lit'
+
+type -> int
+type -> bool
+type -> float
+type -> char
+
+identifier -> letter
+identifier -> letter digit
+letter -> id
+digit -> dig
